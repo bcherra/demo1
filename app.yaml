@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 runtime: nodejs12
 handlers:
 # Serve all static files with url ending with a file extension
@@ -7,4 +8,15 @@ handlers:
 # Catch all handler to index.html
 - url: /.*
   static_files: build/index.html
+=======
+runtime: nodejs12
+handlers:
+# Serve all static files with url ending with a file extension
+- url: /(.*\..+)$
+  static_files: build/\1
+  upload: build/(.*\..+)$
+# Catch all handler to index.html
+- url: /.*
+  static_files: build/index.html
+>>>>>>> 5051a155c5f3e9784a37c60ac037364acdd109fa
   upload: build/index.html
